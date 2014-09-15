@@ -7,12 +7,22 @@
 
 if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
-<h3 class="tribe-events-visuallyhidden"><?php _e( 'Week Navigation', 'tribe-events-calendar-pro' ); ?></h3>
+<?php /* ?><h3 class="tribe-events-visuallyhidden"><?php _e( 'Week Navigation', 'tribe-events-calendar-pro' ); ?></h3><?php */ ?>
 <ul class="tribe-events-sub-nav">
-	<li class="tribe-events-nav-previous">
-		<?php echo tribe_previous_week_link() ?>
-	</li>
-	<li class="tribe-events-nav-next">
-		<?php echo tribe_next_week_link() ?>
-	</li>
+	<?php // Previous Page Navigation ?>
+	<li class="nav-previous"><?php echo tribe_previous_week_link(); ?></li>
+
+	<?php // Next Page Navigation ?>
+	<li class="nav-next"><?php echo tribe_next_week_link(); ?></li>
+
+	<?php 
+		// AJAX
+		// Use classes .tribe-events-nav-previous & .tribe-events-nav-previous 
+	?>
+	<?php /*// Previous Page Navigation ?>
+	<li class="nav-previous tribe-events-nav-previous"><?php echo tribe_previous_week_link(); ?></li>
+
+	<?php // Next Page Navigation ?>
+	<li class="nav-next tribe-events-nav-next"><?php echo tribe_next_week_link(); ?></li>
+	<?php */ ?>
 </ul>

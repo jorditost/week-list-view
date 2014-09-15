@@ -9,9 +9,9 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 <div id="tribe-events-content" class="tribe-events-week-grid tribe-events-time-list">
 	
 	<?php // Calendar Title ?>
-	<?php do_action( 'tribe_events_before_the_title') ?>
-	<h2 class="tribe-events-page-title"><?php tribe_events_title() ?></h2>
-	<?php do_action( 'tribe_events_after_the_title') ?>
+	<?php do_action( 'tribe_events_before_the_title'); ?>
+	<?php /* ?><h1 class="section-title tribe-events-page-title"><span><?php tribe_events_title() ?></span></h1><?php */ ?>
+	<?php do_action( 'tribe_events_after_the_title'); ?>
 
 	<?php // Notices ?>
 	<?php tribe_events_the_notices(); ?>
@@ -19,9 +19,8 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 	<?php // Calendar Header ?>
 	<?php do_action( 'tribe_events_before_header'); ?>
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes('week-header') ?>>
-
 		<?php // Header Navigation ?>
-		<?php tribe_get_template_part( 'week/nav', 'header' ); ?>
+		<?php //tribe_get_template_part( 'week/nav', 'header' ); ?>
 	</div>
 	<?php do_action( 'tribe_events_after_header'); ?>
 
@@ -37,4 +36,7 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 		<?php do_action( 'tribe_events_after_footer_nav' ); ?>
 	</div>
 	<?php do_action( 'tribe_events_after_footer'); ?>
+
+	<?php //tribe_get_template_part( 'week/mobile' ); ?>
+	<?php //tribe_get_template_part( 'week/tooltip' ); ?>
 </div>
